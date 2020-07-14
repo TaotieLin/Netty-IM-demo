@@ -6,10 +6,10 @@ package server;
  * @date 2020/7/13 10:34
  */
 
+import codec.Invocation;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelId;
 import io.netty.util.AttributeKey;
-import org.aopalliance.intercept.Invocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

@@ -25,7 +25,7 @@ public class MessageHandlerContainer implements InitializingBean {
     /**
      * 消息类型与 MessageHandler 的映射
      */
-    private final Map<String, MessageHandler> handlers = new HashMap<>();
+    private final Map<String, MessageHandler<?>> handlers = new HashMap<>();
 
     @Autowired
     private ApplicationContext applicationContext;
@@ -57,23 +57,21 @@ public class MessageHandlerContainer implements InitializingBean {
         Type[] interfaces = targetClass.getGenericInterfaces();
         Class<?> superclass = targetClass.getSuperclass();
         // 此处，是以父类的接口为准
-        while ((Objects.isNull(interfaces) || 0 == interfaces.length) && Objects.nonNull(superclass)){
+        while (0 == interfaces.length && Objects.nonNull(superclass)){
             interfaces = superclass.getGenericInterfaces();
             superclass = targetClass.getSuperclass();
         }
-        if (Objects.nonNull(interfaces)){
-            for (Type type : interfaces){
-                //要求type是泛型参数
-                if (type instanceof ParameterizedType){
-                    ParameterizedType parameterizedType = (ParameterizedType) type;
-                    if (Objects.equals(parameterizedType.getRawType(),MessageHandler.class)){
-                        Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
-                        //取首个元素
-                        if(Objects.nonNull(actualTypeArguments) && actualTypeArguments.length >0){
-                            return (Class<Message>) actualTypeArguments[0];
-                        } else {
-                            throw new IllegalStateException(String.format("类型(%s) 获得不到消息类型", handler));
-                        }
+        for (Type type : interfaces){
+            //要求type是泛型参数
+            if (type instanceof ParameterizedType){
+                ParameterizedType parameterizedType = (ParameterizedType) type;
+                if (Objects.equals(parameterizedType.getRawType(),MessageHandler.class)){
+                    Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
+                    //取首个元素
+                    if(Objects.nonNull(actualTypeArguments) && actualTypeArguments.length >0){
+                        return (Class<Message>) actualTypeArguments[0];
+                    } else {
+                        throw new IllegalStateException(String.format("类型(%s) 获得不到消息类型", handler));
                     }
                 }
             }

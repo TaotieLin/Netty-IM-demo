@@ -1,5 +1,6 @@
 package message.chat;
 
+import dispatcher.Message;
 import lombok.Data;
 
 /**
@@ -7,7 +8,7 @@ import lombok.Data;
  * @date 2020/7/13 16:39
  */
 @Data
-public class ChatSendToOneRequest {
+public class ChatSendToOneRequest implements Message {
 
     public static final String TYPE = "CHAT_SEND_TO_ONE_REQUEST";
 
