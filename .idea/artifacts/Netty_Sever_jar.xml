@@ -1,6 +1,9 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="Netty-Sever:jar">
+  <artifact type="jar" build-on-make="true" name="Netty-Sever:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Netty_Sever_jar</output-path>
+    <properties id="ant-preprocessing">
+      <options enabled="true" />
+    </properties>
     <root id="archive" name="Netty-Sever.jar">
       <element id="module-output" name="Netty-Sever" />
       <element id="module-output" name="Netty-common" />
@@ -25,6 +28,7 @@
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.5.RELEASE/spring-beans-5.2.5.RELEASE.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.50.Final/netty-all-4.1.50.Final.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/yaml/snakeyaml/1.25/snakeyaml-1.25.jar" path-in-jar="/" />
+      <element id="artifact" artifact-name="Netty-Client:jar" />
     </root>
   </artifact>
 </component>

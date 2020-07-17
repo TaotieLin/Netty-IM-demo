@@ -27,6 +27,6 @@ public class AuthRequestHandler implements MessageHandler<AuthRequest> {
 
     @Override
     public String getType() {
-        return AuthResponse.TYPE;
+        return AuthRequest.TYPE;
     }
 }

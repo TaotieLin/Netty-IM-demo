@@ -1,4 +1,4 @@
-package config;
+package taotie.config;
 
 import dispatcher.MessageDispatcher;
 import dispatcher.MessageHandlerContainer;

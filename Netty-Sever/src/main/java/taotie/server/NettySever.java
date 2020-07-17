@@ -7,12 +7,15 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.sctp.nio.NioSctpServerChannel;
+import io.netty.channel.socket.nio.NioServerSocketChannel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import taotie.server.handler.NettyServerHandlerInitializer;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.net.InetSocketAddress;
 
@@ -21,7 +24,7 @@ import java.net.InetSocketAddress;
  * @desc
  * @date 2020/7/10 15:38
  */
-
+@Component
 public class NettySever {
 
 
@@ -52,13 +55,14 @@ public class NettySever {
     /**
      * 启动netty
      */
+    @PostConstruct
     public void start() throws InterruptedException {
 
         //创建ServerBootstrap 对象 用于netty启动
         ServerBootstrap bootstrap = new ServerBootstrap();
         //设置服务启动引导各种属性
         bootstrap.group(bossGroup,worker)
-                .channel(NioSctpServerChannel.class)
+                .channel(NioServerSocketChannel.class)
                 .localAddress(new InetSocketAddress(port))
                 .option(ChannelOption.SO_BACKLOG,1024)
                 .childOption(ChannelOption.TCP_NODELAY,true)

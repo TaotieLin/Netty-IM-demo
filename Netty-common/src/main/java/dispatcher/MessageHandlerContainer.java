@@ -6,6 +6,8 @@ import org.springframework.aop.framework.AopProxyUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -18,6 +20,7 @@ import java.util.Objects;
  * @desc
  * @date 2020/7/13 11:09
  */
+@Component
 public class MessageHandlerContainer implements InitializingBean {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
@@ -40,7 +43,7 @@ public class MessageHandlerContainer implements InitializingBean {
     /**
      * 获得类型对应的 MessageHandler
      */
-    MessageHandler<?> getMessageHandler(String type){
+    public MessageHandler<?> getMessageHandler(String type){
         MessageHandler<?> handler = handlers.get(type);
         if (handler == null){
             throw new IllegalArgumentException(String.format("类型(%s) 找不到匹配的 MessageHandler 处理器", type));

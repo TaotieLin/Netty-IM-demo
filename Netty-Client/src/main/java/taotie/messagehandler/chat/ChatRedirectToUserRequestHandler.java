@@ -5,12 +5,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import io.netty.channel.Channel;
+import org.springframework.stereotype.Component;
 import taotie.message.chat.ChatRedirectToUserRequest;
 
 /**
  * @author lkd
  * @date 2020/7/14 16:13
  */
+@Component
 public class ChatRedirectToUserRequestHandler implements MessageHandler<ChatRedirectToUserRequest> {
 
     private Logger logger = LoggerFactory.getLogger(getClass());

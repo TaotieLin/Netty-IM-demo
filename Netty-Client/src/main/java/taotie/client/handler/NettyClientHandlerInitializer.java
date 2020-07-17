@@ -1,7 +1,14 @@
-package client.handler;
+package taotie.client.handler;
 
-import io.netty.channel.ChannelHandler;
+import codec.InvocationDecoder;
+import codec.InvocationEncoder;
+import dispatcher.MessageDispatcher;
+import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInitializer;
+import io.netty.handler.timeout.IdleStateHandler;
+import io.netty.handler.timeout.ReadTimeoutHandler;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,18 +16,50 @@ import org.springframework.stereotype.Component;
  * @date 2020/7/14 10:04
  */
 @Component
-public class NettyClientHandlerInitializer implements ChannelHandler {
+public class NettyClientHandlerInitializer extends ChannelInitializer<Channel> {
 
 
+    /**
+     * 心跳超时时间
+     */
+    private static final Integer READ_TIMEOUT_SECONDS = 60;
+
+    @Autowired
+    private MessageDispatcher messageDispatcher;
+
+    @Autowired
+    private NettyClientHandler nettyClientHandler;
+
+    @Override
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
 
     }
 
+    @Override
     public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
 
     }
 
+    @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
 
+    }
+
+
+    @Override
+    protected void initChannel(Channel ch) {
+        ch.pipeline()
+                // 空闲检测
+                .addLast(new IdleStateHandler(READ_TIMEOUT_SECONDS, 0, 0))
+                .addLast(new ReadTimeoutHandler(3 * READ_TIMEOUT_SECONDS))
+                // 编码器
+                .addLast(new InvocationEncoder())
+                // 解码器
+                .addLast(new InvocationDecoder())
+                // 消息分发器
+                .addLast(messageDispatcher)
+                // 客户端处理器
+                .addLast(nettyClientHandler)
+        ;
     }
 }

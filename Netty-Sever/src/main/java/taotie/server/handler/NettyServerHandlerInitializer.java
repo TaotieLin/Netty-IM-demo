@@ -8,9 +8,9 @@ import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.handler.timeout.ReadTimeoutHandler;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -26,9 +26,9 @@ public class NettyServerHandlerInitializer extends ChannelInitializer<Channel> {
      */
     private static final Integer READ_TIMEOUT_SECONDS = 3 * 60;
 
-    @Autowired
+    @Resource
     private MessageDispatcher messageDispatcher;
-    @Autowired
+    @Resource
     private NettyServerHandler nettyServerHandler;
 
     @Override
@@ -46,8 +46,7 @@ public class NettyServerHandlerInitializer extends ChannelInitializer<Channel> {
                 // 消息分发器
                 .addLast(messageDispatcher)
                 // 服务端处理器
-                .addLast(nettyServerHandler)
-        ;
+                .addLast(nettyServerHandler)    ;
     }
 
 }

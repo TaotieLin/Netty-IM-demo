@@ -1,15 +1,18 @@
-package client;
+package taotie.client;
 
-import client.handler.NettyClientHandlerInitializer;
+
 import codec.Invocation;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import taotie.client.handler.NettyClientHandler;
+import taotie.client.handler.NettyClientHandlerInitializer;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -35,10 +38,13 @@ public class NettyClient {
     @Autowired
     private NettyClientHandlerInitializer nettyClientHandlerInitializer;
 
+    @Autowired
+    private NettyClientHandler nettyClientHandler;
+
     /**
      * 线程组，用于客户端对服务端的链接、数据读写
      */
-    private EventLoopGroup eventLoopGroup = new NioEventLoopGroup();
+    private final EventLoopGroup eventLoopGroup = new NioEventLoopGroup();
 
     /**
      * Netty Client Channel
@@ -54,9 +60,11 @@ public class NettyClient {
                 .remoteAddress(serverHost,serverPort)
                 .option(ChannelOption.SO_KEEPALIVE,true)
                 .option(ChannelOption.TCP_NODELAY,true)
+                .handler(nettyClientHandler)
                 .handler(nettyClientHandlerInitializer);
         //链接服务器，并异步等待成功，即启动客户端
         bootstrap.connect().addListener(new ChannelFutureListener() {
+            @Override
             public void operationComplete(ChannelFuture future) throws Exception {
                 if (!future.isSuccess()){
                     log.error("[start][Netty Client 连接服务器({}:{}) 失败]", serverHost, serverPort);

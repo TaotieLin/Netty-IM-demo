@@ -11,7 +11,7 @@ public class HeartbeatResponse implements Message {
     /**
      * 类型 - 心跳请求
      */
-    public static final String TYPE = "HEARTBEAT_REQUEST";
+    public static final String TYPE = "HEARTBEAT_RESPONSE";
 
     @Override
     public String toString() {

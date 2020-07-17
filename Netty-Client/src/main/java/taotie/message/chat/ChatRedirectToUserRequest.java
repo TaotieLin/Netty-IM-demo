@@ -16,7 +16,7 @@ public class ChatRedirectToUserRequest implements Message {
      */
     private String msgId;
     /**
-     * 内容
+     *  内容
      */
     private String content;
 

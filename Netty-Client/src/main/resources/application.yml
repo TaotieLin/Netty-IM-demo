@@ -1,4 +1,7 @@
 netty:
   server:
-    host: 127.0.0.1 # Netty Server 地址
-    port: 8888 # Netty Server 端口
+      host: 127.0.0.1
+      port: 8999
+server:
+  address: localhost
+  port: 8080
