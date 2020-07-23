@@ -20,67 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84f24702-b9df-4726-98bc-7d8f4c34e88a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Netty_Client_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Netty_Sever_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Netty-Client/src/main/resources/log/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Netty-Sever/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/client/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/client/NettyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/client/handler/NettyClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/client/handler/NettyClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/client/handler/NettyClientHandlerInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/client/handler/NettyClientHandlerInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/config/NettyClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/config/NettyClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/message/chat/ChatRedirectToUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/message/chat/ChatRedirectToUserRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/message/chat/ChatSendToAllRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/message/chat/ChatSendToAllRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/message/chat/ChatSendToOneRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/message/chat/ChatSendToOneRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/message/hearbeat/HeartbeatResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/message/hearbeat/HeartbeatResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/messagehandler/auth/AuthRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/messagehandler/auth/AuthRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/messagehandler/chat/ChatRedirectToUserRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/messagehandler/chat/ChatRedirectToUserRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/client/NettyClient$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/client/NettyClient$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/client/NettyClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/client/handler/NettyClientHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/client/handler/NettyClientHandlerInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/config/NettyClientConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/taotie/NettyClientApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/taotie/controller/TestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/taotie/message/auth/AuthRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/taotie/message/auth/AuthResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/taotie/message/chat/ChatRedirectToUserRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/taotie/message/chat/ChatSendResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/taotie/message/chat/ChatSendToAllRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/taotie/message/chat/ChatSendToOneRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/taotie/message/hearbeat/HeartbeatRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/taotie/message/hearbeat/HeartbeatResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/taotie/messagehandler/auth/AuthRequestHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/taotie/messagehandler/chat/ChatRedirectToUserRequestHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/taotie/messagehandler/chat/ChatSendResponseHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/target/classes/taotie/messagehandler/heartbeat/HeartbeatRequestHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Sever/src/main/java/taotie/NettyServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Sever/src/main/java/taotie/NettyServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Sever/src/main/java/taotie/config/NettyServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Sever/src/main/java/taotie/config/NettyServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Sever/src/main/java/taotie/server/NettySever.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Sever/src/main/java/taotie/server/NettySever.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Sever/src/main/java/taotie/server/handler/NettyServerHandlerInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Sever/src/main/java/taotie/server/handler/NettyServerHandlerInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Sever/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Sever/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-common/src/main/java/dispatcher/MessageDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-common/src/main/java/dispatcher/MessageDispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-common/src/main/java/dispatcher/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-common/src/main/java/dispatcher/MessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-common/src/main/java/dispatcher/MessageHandlerContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-common/src/main/java/dispatcher/MessageHandlerContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-common/target/classes/codec/Invocation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-common/target/classes/codec/InvocationDecoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-common/target/classes/codec/InvocationEncoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-common/target/classes/dispatcher/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-common/target/classes/dispatcher/MessageDispatcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-common/target/classes/dispatcher/MessageHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-common/target/classes/dispatcher/MessageHandlerContainer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-demo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +70,7 @@
       <recent name="C:\Users\Administrator\Documents\Netty-IM-demo\Netty-Client\src\main\java\message\chat" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.NettyClientApplication">
+  <component name="RunManager" selected="Spring Boot.NettyServerApplication ">
     <configuration name="NettyClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Netty-Client" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="taotie.NettyClientApplication" />
@@ -196,7 +137,9 @@
       <workItem from="1594868324770" duration="597000" />
       <workItem from="1594891420853" duration="599000" />
       <workItem from="1594947739134" duration="8000" />
-      <workItem from="1594947918793" duration="19421000" />
+      <workItem from="1594947918793" duration="20042000" />
+      <workItem from="1595206833289" duration="763000" />
+      <workItem from="1595468548458" duration="1888000" />
     </task>
     <servers />
   </component>
