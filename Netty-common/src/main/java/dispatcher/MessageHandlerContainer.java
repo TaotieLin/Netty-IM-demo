@@ -14,6 +14,7 @@ import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Vector;
 
 /**
  * @author lkd
@@ -23,7 +24,7 @@ import java.util.Objects;
 @Component
 public class MessageHandlerContainer implements InitializingBean {
 
-    private Logger logger = LoggerFactory.getLogger(getClass());
+    private final Logger logger = LoggerFactory.getLogger(getClass());
 
     /**
      * 消息类型与 MessageHandler 的映射
@@ -64,6 +65,10 @@ public class MessageHandlerContainer implements InitializingBean {
             interfaces = superclass.getGenericInterfaces();
             superclass = targetClass.getSuperclass();
         }
+
+
+
+
         for (Type type : interfaces){
             //要求type是泛型参数
             if (type instanceof ParameterizedType){

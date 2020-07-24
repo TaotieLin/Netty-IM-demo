@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="84f24702-b9df-4726-98bc-7d8f4c34e88a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Netty-common/src/main/java/dispatcher/MessageHandlerContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-common/src/main/java/dispatcher/MessageHandlerContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +140,8 @@
       <workItem from="1594947739134" duration="8000" />
       <workItem from="1594947918793" duration="20042000" />
       <workItem from="1595206833289" duration="763000" />
-      <workItem from="1595468548458" duration="1888000" />
+      <workItem from="1595468548458" duration="11417000" />
+      <workItem from="1595552120863" duration="10160000" />
     </task>
     <servers />
   </component>
@@ -279,10 +281,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594364232819" />
-    <state width="792" height="956" key="documentation.popup.size" timestamp="1594618974326">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="792" height="956" key="documentation.popup.size" timestamp="1595569110622">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="792" height="956" key="documentation.popup.size/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594618974326" />
+    <state width="792" height="956" key="documentation.popup.size/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1595569110622" />
     <state x="662" y="254" width="596" height="532" key="find.popup" timestamp="1594966163285">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
