@@ -14,6 +14,15 @@
 	        jdk动态代理只能对实现接口的类进行代理 1、生成的代理类继承了Proxy，由于java是单继承，所以只能实现接口，通过接口实现 
 	        CGLIB动态字节注入方式，通过继承实现代理，没有限制。 CGLIB底层：使用字节码处理框架ASM，来转换字节码并生成新的类。 
 	spring-事务transactional
+	    事务的特性ACID
+	    七个事务传播级别
+	     PROPAGATION_REQUIRED 如果存在事务，则支持当前事务。没有则开启新的事务。
+	     PROPAGATION_SUPPORTS 如果存在事务，支持当前事务。如果没有事务，则非事务执行。但是对于事务同步的事务管理器，PROPAGATION_SUPPORTS与不使用事务有少许不同。
+	     PROPAGATION_MANDATORY 如果存在事务，则支持当前事务，如果没有事务则抛出异常。
+	     PROPAGATION_REQUIRES_NEW 总是开启事务，如果事务已存在，则将存在事务挂起。
+	     PROPAGATION_NOT_SUPPORTED 总是非事务地执行，并挂起任何存在的事务。
+	     PROPAGATION_NEVER 总是非事务的执行，如果存在一个活动事务，则抛出异常。
+	     PROPAGATION_NESTED 如果一个活动的事务存在，则运行在一个嵌套的事务中，如果没有活动事务，则按REQUIRED属性执行。
 		1，除非特殊配置（比如使用 AspectJ 静态织入实现 AOP），否则只有定义在 public 方法上的 @Transactional 才能生效。原因是，Spring 默认通过动态代理的方式实现 AOP，对目标方法进行增强，private 方法无法代理到，Spring 自然也无法动态增强事务处理逻辑。
 		2、必须通过代理过的外部类调用才能生效。
 		3、只有异常传播出了标记了 @Transactional 注解的方法，事务才能回滚
@@ -43,6 +52,7 @@
 #3.数据库相关知识
 	sql高级语法
 	sql性能优化
+	    leftjoin
 	建表设计
 	NoSql
 	MyCat了解
@@ -61,7 +71,8 @@
 	JVM优化
 	内存模型
 	    java堆 新生代 老年代  存放对象
-	    栈 方法区 存放方法 部分对象 
+	    栈 方法区 存放方法 部分对象
+	    程序计数器 
 	    常量池
 	哪些对象可以作为ROOT对象
 	虚拟机栈中的引用对象 比如
