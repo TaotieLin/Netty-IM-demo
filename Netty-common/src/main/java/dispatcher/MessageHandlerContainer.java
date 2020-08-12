@@ -14,7 +14,6 @@ import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Vector;
 
 /**
  * @author lkd
@@ -39,6 +38,7 @@ public class MessageHandlerContainer implements InitializingBean {
         applicationContext.getBeansOfType(MessageHandler.class).values()
                 .forEach(messageHandler -> handlers.put(messageHandler.getType(),messageHandler));
         logger.info("[afterPropertiesSet][消息处理器数量：{}]", handlers.size());
+
     }
 
     /**

@@ -20,13 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84f24702-b9df-4726-98bc-7d8f4c34e88a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/controller/AnonymousDemo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/controller/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/controller/T.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mianshi.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis分布式锁.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/设计模式.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/client/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/client/NettyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Netty-Sever/src/main/java/taotie/NettyServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Sever/src/main/java/taotie/NettyServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Netty-common/src/main/java/dispatcher/MessageHandlerContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-common/src/main/java/dispatcher/MessageHandlerContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -59,9 +72,12 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.26791278" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="taotie.controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Documents\Netty-IM-demo\Netty-Client\src\main\resources" />
       <recent name="C:\Users\Administrator\Documents\Netty-IM-demo\Netty-Sever\src\main\java\taotie" />
@@ -70,7 +86,20 @@
       <recent name="C:\Users\Administrator\Documents\Netty-IM-demo\Netty-Client\src\main\java\message\chat" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.NettyServerApplication ">
+  <component name="RunManager" selected="Application.AnonymousDemo1">
+    <configuration name="AnonymousDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="taotie.controller.AnonymousDemo1" />
+      <module name="Netty-Client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="taotie.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NettyClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Netty-Client" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="taotie.NettyClientApplication" />
@@ -103,15 +132,24 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.AnonymousDemo1" />
       <item itemvalue="Spring Boot.NettyClientApplication" />
       <item itemvalue="Spring Boot.NettyServerApplication " />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AnonymousDemo1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpringBeansView">
     <option name="beanDetailsProportion" value="0.3" />
   </component>
   <component name="SpringGeneralSettings">
     <option name="allowAutoConfigurationMode" value="true" />
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -144,7 +182,17 @@
       <workItem from="1595811065906" duration="15000" />
       <workItem from="1595817223645" duration="3045000" />
       <workItem from="1595898199312" duration="1589000" />
-      <workItem from="1595915865435" duration="557000" />
+      <workItem from="1595915865435" duration="8390000" />
+      <workItem from="1595984805303" duration="5741000" />
+      <workItem from="1596074335743" duration="2584000" />
+      <workItem from="1596416359444" duration="598000" />
+      <workItem from="1596589651115" duration="595000" />
+      <workItem from="1596591248523" duration="50000" />
+      <workItem from="1596692456461" duration="1197000" />
+      <workItem from="1596762750359" duration="52000" />
+      <workItem from="1596770607088" duration="3869000" />
+      <workItem from="1597129775984" duration="4440000" />
+      <workItem from="1597194143555" duration="2685000" />
     </task>
     <servers />
   </component>
@@ -207,46 +255,46 @@
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594689469819" />
     <state x="2660" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594865751682" />
-    <state width="1877" height="351" key="GridCell.Tab.0.bottom" timestamp="1594972795421">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="351" key="GridCell.Tab.0.bottom" timestamp="1596096519796">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="351" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594972795421" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594954128453" />
-    <state width="1877" height="351" key="GridCell.Tab.0.center" timestamp="1594972795421">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595922024988" />
+    <state width="1877" height="351" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596096519796" />
+    <state width="1877" height="351" key="GridCell.Tab.0.center" timestamp="1596096519796">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="351" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594972795421" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594954128453" />
-    <state width="1877" height="351" key="GridCell.Tab.0.left" timestamp="1594972795421">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595922024988" />
+    <state width="1877" height="351" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596096519796" />
+    <state width="1877" height="351" key="GridCell.Tab.0.left" timestamp="1596096519796">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="351" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594972795421" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594954128453" />
-    <state width="1877" height="351" key="GridCell.Tab.0.right" timestamp="1594972795421">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595922024988" />
+    <state width="1877" height="351" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596096519796" />
+    <state width="1877" height="351" key="GridCell.Tab.0.right" timestamp="1596096519796">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="351" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594972795421" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594954128453" />
-    <state width="1877" height="351" key="GridCell.Tab.1.bottom" timestamp="1594972795421">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595922024988" />
+    <state width="1877" height="351" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596096519796" />
+    <state width="1877" height="351" key="GridCell.Tab.1.bottom" timestamp="1596096520331">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="351" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594972795421" />
-    <state width="1877" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594954128309" />
-    <state width="1877" height="351" key="GridCell.Tab.1.center" timestamp="1594972795421">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595922024988" />
+    <state width="1877" height="351" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596096520331" />
+    <state width="1877" height="351" key="GridCell.Tab.1.center" timestamp="1596096520331">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="351" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594972795421" />
-    <state width="1877" height="282" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594954128309" />
-    <state width="1877" height="351" key="GridCell.Tab.1.left" timestamp="1594972795421">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595922024988" />
+    <state width="1877" height="351" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596096520331" />
+    <state width="1877" height="351" key="GridCell.Tab.1.left" timestamp="1596096520331">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="351" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594972795421" />
-    <state width="1877" height="282" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594954128309" />
-    <state width="1877" height="351" key="GridCell.Tab.1.right" timestamp="1594972795421">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595922024988" />
+    <state width="1877" height="351" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596096520331" />
+    <state width="1877" height="351" key="GridCell.Tab.1.right" timestamp="1596096520331">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="351" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594972795421" />
-    <state width="1877" height="282" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594954128309" />
+    <state width="1877" height="282" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595922024988" />
+    <state width="1877" height="351" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596096520331" />
     <state width="1877" height="351" key="GridCell.Tab.2.bottom" timestamp="1594972795422">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -275,33 +323,34 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2541" y="293" key="NewModule_or_Project.wizard/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594864277770" />
-    <state x="2381" y="164" key="SettingsEditor" timestamp="1594948938031">
+    <state x="2381" y="164" key="SettingsEditor" timestamp="1596013523096">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594784540022" />
-    <state x="2381" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594948938031" />
+    <state x="2381" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596013523096" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1594364232819">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594364232819" />
-    <state width="792" height="956" key="documentation.popup.size" timestamp="1595569110622">
+    <state width="792" height="956" key="documentation.popup.size" timestamp="1597200218839">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="792" height="956" key="documentation.popup.size/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594618974326" />
-    <state width="792" height="956" key="documentation.popup.size/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1595569110622" />
-    <state x="662" y="254" width="596" height="532" key="find.popup" timestamp="1594966163285">
+    <state width="792" height="956" key="documentation.popup.size/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595922342696" />
+    <state width="792" height="956" key="documentation.popup.size/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1597200218839" />
+    <state x="662" y="254" width="596" height="532" key="find.popup" timestamp="1595922032474">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="662" y="254" width="596" height="532" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594966163285" />
+    <state x="662" y="254" width="596" height="532" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595922032473" />
     <state x="2582" y="254" width="596" height="532" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594951923805" />
     <state x="334" y="180" key="new project wizard" timestamp="1594364221858">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="334" y="180" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594364221858" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1594620107466">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597199950089">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594620107466" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595924947973" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1597199950089" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -310,6 +359,11 @@
           <url>file://$PROJECT_DIR$/Netty-Sever/src/main/java/taotie/messgeHandle/auth/AuthRequestHandler.java</url>
           <line>27</line>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://D:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/HashSet.java</url>
+          <line>219</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

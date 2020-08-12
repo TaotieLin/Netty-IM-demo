@@ -5,7 +5,6 @@ import codec.Invocation;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +28,6 @@ public class NettyClient {
      * 重连频率，单位秒
      */
     private static final Integer RECONNECT_SECONDS = 20;
-
     @Value("${netty.server.host}")
     private String serverHost;
     @Value("${netty.server.port}")
@@ -75,10 +73,12 @@ public class NettyClient {
                 log.info("[start][Netty Client 连接服务器({}:{}) 成功]", serverHost, serverPort);
             }
         });
+
     }
 
     public void reconnect() {
             eventLoopGroup.schedule(new Runnable() {
+                @Override
                 public void run() {
                     log.info("[reconnect][开始重连]");
                     try{

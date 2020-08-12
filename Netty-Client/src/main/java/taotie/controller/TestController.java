@@ -65,6 +65,9 @@ public class TestController {
         } else if (HeartbeatResponse.TYPE.equals(type)) {
             return new HeartbeatResponse();
         }
+
+
+
         return null;
     }
 
