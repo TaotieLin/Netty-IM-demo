@@ -20,17 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84f24702-b9df-4726-98bc-7d8f4c34e88a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/controller/AnonymousDemo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/controller/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/controller/T.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mianshi.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis分布式锁.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/设计模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Collection.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Netty-Sever/src/test/java/CollectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/单词本.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/client/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/client/NettyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Client/src/main/java/taotie/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-Sever/src/main/java/taotie/NettyServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-Sever/src/main/java/taotie/NettyServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Netty-common/src/main/java/dispatcher/MessageHandlerContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Netty-common/src/main/java/dispatcher/MessageHandlerContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +79,7 @@
       <recent name="C:\Users\Administrator\Documents\Netty-IM-demo\Netty-Client\src\main\java\message\chat" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AnonymousDemo1">
+  <component name="RunManager" selected="Spring Boot.NettyServerApplication ">
     <configuration name="AnonymousDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="taotie.controller.AnonymousDemo1" />
       <module name="Netty-Client" />
@@ -193,6 +186,18 @@
       <workItem from="1596770607088" duration="3869000" />
       <workItem from="1597129775984" duration="4440000" />
       <workItem from="1597194143555" duration="2685000" />
+      <workItem from="1597280306802" duration="1185000" />
+      <workItem from="1597297275366" duration="679000" />
+      <workItem from="1597626593206" duration="598000" />
+      <workItem from="1597712302317" duration="598000" />
+      <workItem from="1597798601871" duration="1198000" />
+      <workItem from="1597884896153" duration="1189000" />
+      <workItem from="1597971031567" duration="599000" />
+      <workItem from="1598229569538" duration="1884000" />
+      <workItem from="1598317335636" duration="3918000" />
+      <workItem from="1598403387623" duration="1714000" />
+      <workItem from="1598412972135" duration="605000" />
+      <workItem from="1598490290611" duration="1082000" />
     </task>
     <servers />
   </component>
@@ -233,6 +238,10 @@
     </state>
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594790692591" />
     <state x="2334" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594950077842" />
+    <state x="2614" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598256751876">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2614" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1598256751876" />
     <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1594972451831">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -346,11 +355,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="334" y="180" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594364221858" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597199950089">
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598321096164">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595924947973" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1597199950089" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1598321096164" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

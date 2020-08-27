@@ -30,6 +30,8 @@
 		5.请确认事务传播配置是否符合自己的业务逻辑
 	springMvc:路由
 	mybatis：三级缓存，类型处理器，多数据源，动态数据源
+	    mybtsi实现Redis分布式缓存：
+	        实现MyBatis
 	mybatisPuls：基础mapper，条件构造器。
 	netty，底层原理，demo实现。
 	日志框架了解
