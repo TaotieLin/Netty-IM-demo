@@ -20,11 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84f24702-b9df-4726-98bc-7d8f4c34e88a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Collection.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Netty-Sever/src/test/java/CollectionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/单词本.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/单词本.md" beforeDir="false" afterPath="$PROJECT_DIR$/单词本.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,6 +195,7 @@
       <workItem from="1598403387623" duration="1714000" />
       <workItem from="1598412972135" duration="605000" />
       <workItem from="1598490290611" duration="1082000" />
+      <workItem from="1598575648705" duration="3089000" />
     </task>
     <servers />
   </component>
