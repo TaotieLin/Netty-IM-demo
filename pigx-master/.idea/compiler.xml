@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="recommend-resource" />
+        <module name="pigx-daemon-elastic-job" />
+        <module name="pigx-common-data" />
+        <module name="pigx-common-sequence" />
+        <module name="pigx-common-log" />
+        <module name="pigx-recommend" />
+        <module name="pigx-mp-platform" />
+        <module name="pigx-gateway" />
+        <module name="pigx-common-security" />
+        <module name="pigx-oa-platform" />
+        <module name="pigx-monitor" />
+        <module name="pigx-common-minio" />
+        <module name="pigx-register" />
+        <module name="pigx-upms-api" />
+        <module name="pigx-common-transaction" />
+        <module name="pigx-auth" />
+        <module name="pigx-common-job" />
+        <module name="pigx-common-datasource" />
+        <module name="pigx-common-core" />
+        <module name="r" />
+        <module name="pigx-common-gateway" />
+        <module name="pigx-common-swagger" />
+        <module name="pigx-tx-manager" />
+        <module name="pigx-sentinel-dashboard" />
+        <module name="pigx-daemon-quartz" />
+        <module name="pigx-sso-client-demo" />
+        <module name="pigx-upms-biz" />
+        <module name="pigx-pay-platform" />
+        <module name="pigx-codegen" />
+        <module name="pigx-common-sentinel" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="pigx" target="1.8" />
+      <module name="pigx-auth" target="1.8" />
+      <module name="pigx-codegen" target="1.8" />
+      <module name="pigx-common" target="1.8" />
+      <module name="pigx-common-bom" target="1.8" />
+      <module name="pigx-common-core" target="1.8" />
+      <module name="pigx-common-data" target="1.8" />
+      <module name="pigx-common-datasource" target="1.8" />
+      <module name="pigx-common-gateway" target="1.8" />
+      <module name="pigx-common-job" target="1.8" />
+      <module name="pigx-common-log" target="1.8" />
+      <module name="pigx-common-minio" target="1.8" />
+      <module name="pigx-common-security" target="1.8" />
+      <module name="pigx-common-sentinel" target="1.8" />
+      <module name="pigx-common-sequence" target="1.8" />
+      <module name="pigx-common-swagger" target="1.8" />
+      <module name="pigx-common-transaction" target="1.8" />
+      <module name="pigx-daemon-elastic-job" target="1.8" />
+      <module name="pigx-daemon-quartz" target="1.8" />
+      <module name="pigx-gateway" target="1.8" />
+      <module name="pigx-monitor" target="1.8" />
+      <module name="pigx-mp-platform" target="1.8" />
+      <module name="pigx-oa-platform" target="1.8" />
+      <module name="pigx-pay-platform" target="1.8" />
+      <module name="pigx-recommend" target="1.8" />
+      <module name="pigx-register" target="1.8" />
+      <module name="pigx-sentinel-dashboard" target="1.8" />
+      <module name="pigx-sso-client-demo" target="1.8" />
+      <module name="pigx-tx-manager" target="1.8" />
+      <module name="pigx-upms" target="1.8" />
+      <module name="pigx-upms-api" target="1.8" />
+      <module name="pigx-upms-biz" target="1.8" />
+      <module name="pigx-visual" target="1.8" />
+      <module name="r" target="1.8" />
+      <module name="recommend-resource" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="recommend-resource" options="-parameters" />
+    </option>
+  </component>
+</project>

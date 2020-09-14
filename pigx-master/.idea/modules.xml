@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx.iml" filepath="$PROJECT_DIR$/pigx/pigx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-auth/pigx-auth.iml" filepath="$PROJECT_DIR$/pigx/pigx-auth/pigx-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-codegen/pigx-codegen.iml" filepath="$PROJECT_DIR$/pigx/pigx-visual/pigx-codegen/pigx-codegen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common.iml" filepath="$PROJECT_DIR$/pigx/pigx-common/pigx-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-bom/pigx-common-bom.iml" filepath="$PROJECT_DIR$/pigx/pigx-common/pigx-common-bom/pigx-common-bom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-core/pigx-common-core.iml" filepath="$PROJECT_DIR$/pigx/pigx-common/pigx-common-core/pigx-common-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-data/pigx-common-data.iml" filepath="$PROJECT_DIR$/pigx/pigx-common/pigx-common-data/pigx-common-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-datasource/pigx-common-datasource.iml" filepath="$PROJECT_DIR$/pigx/pigx-common/pigx-common-datasource/pigx-common-datasource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-gateway/pigx-common-gateway.iml" filepath="$PROJECT_DIR$/pigx/pigx-common/pigx-common-gateway/pigx-common-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-job/pigx-common-job.iml" filepath="$PROJECT_DIR$/pigx/pigx-common/pigx-common-job/pigx-common-job.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-log/pigx-common-log.iml" filepath="$PROJECT_DIR$/pigx/pigx-common/pigx-common-log/pigx-common-log.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-minio/pigx-common-minio.iml" filepath="$PROJECT_DIR$/pigx/pigx-common/pigx-common-minio/pigx-common-minio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-security/pigx-common-security.iml" filepath="$PROJECT_DIR$/pigx/pigx-common/pigx-common-security/pigx-common-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-sentinel/pigx-common-sentinel.iml" filepath="$PROJECT_DIR$/pigx/pigx-common/pigx-common-sentinel/pigx-common-sentinel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-sequence/pigx-common-sequence.iml" filepath="$PROJECT_DIR$/pigx/pigx-common/pigx-common-sequence/pigx-common-sequence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-swagger/pigx-common-swagger.iml" filepath="$PROJECT_DIR$/pigx/pigx-common/pigx-common-swagger/pigx-common-swagger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-transaction/pigx-common-transaction.iml" filepath="$PROJECT_DIR$/pigx/pigx-common/pigx-common-transaction/pigx-common-transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-daemon-elastic-job/pigx-daemon-elastic-job.iml" filepath="$PROJECT_DIR$/pigx/pigx-visual/pigx-daemon-elastic-job/pigx-daemon-elastic-job.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-daemon-quartz/pigx-daemon-quartz.iml" filepath="$PROJECT_DIR$/pigx/pigx-visual/pigx-daemon-quartz/pigx-daemon-quartz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-gateway/pigx-gateway.iml" filepath="$PROJECT_DIR$/pigx/pigx-gateway/pigx-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pigx-master.iml" filepath="$PROJECT_DIR$/.idea/pigx-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-monitor/pigx-monitor.iml" filepath="$PROJECT_DIR$/pigx/pigx-visual/pigx-monitor/pigx-monitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-mp-platform/pigx-mp-platform.iml" filepath="$PROJECT_DIR$/pigx/pigx-visual/pigx-mp-platform/pigx-mp-platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-oa-platform/pigx-oa-platform.iml" filepath="$PROJECT_DIR$/pigx/pigx-visual/pigx-oa-platform/pigx-oa-platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-pay-platform/pigx-pay-platform.iml" filepath="$PROJECT_DIR$/pigx/pigx-visual/pigx-pay-platform/pigx-pay-platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-recommend/pigx-recommend.iml" filepath="$PROJECT_DIR$/pigx/pigx-recommend/pigx-recommend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-register/pigx-register.iml" filepath="$PROJECT_DIR$/pigx/pigx-register/pigx-register.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-sentinel-dashboard/pigx-sentinel-dashboard.iml" filepath="$PROJECT_DIR$/pigx/pigx-visual/pigx-sentinel-dashboard/pigx-sentinel-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-sso-client-demo/pigx-sso-client-demo.iml" filepath="$PROJECT_DIR$/pigx/pigx-visual/pigx-sso-client-demo/pigx-sso-client-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-tx-manager/pigx-tx-manager.iml" filepath="$PROJECT_DIR$/pigx/pigx-visual/pigx-tx-manager/pigx-tx-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-upms/pigx-upms.iml" filepath="$PROJECT_DIR$/pigx/pigx-upms/pigx-upms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-upms/pigx-upms-api/pigx-upms-api.iml" filepath="$PROJECT_DIR$/pigx/pigx-upms/pigx-upms-api/pigx-upms-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-upms/pigx-upms-biz/pigx-upms-biz.iml" filepath="$PROJECT_DIR$/pigx/pigx-upms/pigx-upms-biz/pigx-upms-biz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-visual.iml" filepath="$PROJECT_DIR$/pigx/pigx-visual/pigx-visual.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-visual/recommend.iml" filepath="$PROJECT_DIR$/pigx/pigx-visual/recommend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pigx/pigx-visual/recommend-resource.iml" filepath="$PROJECT_DIR$/pigx/pigx-visual/recommend-resource.iml" />
+    </modules>
+  </component>
+</project>

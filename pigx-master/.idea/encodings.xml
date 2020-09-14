@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/pigx/pigx-auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-auth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-data/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-data/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-datasource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-datasource/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-job/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-log/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-log/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-minio/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-minio/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-security/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-sentinel/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-sentinel/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-sequence/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-sequence/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-swagger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-transaction/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-common/pigx-common-transaction/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-recommend/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-recommend/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-register/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-register/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-upms/pigx-upms-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-upms/pigx-upms-biz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-upms/pigx-upms-biz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-codegen/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-codegen/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-codegen/src/main/resources/generator.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-daemon-elastic-job/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-daemon-elastic-job/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-daemon-quartz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-daemon-quartz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-monitor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-monitor/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-mp-platform/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-mp-platform/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-oa-platform/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-oa-platform/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-pay-platform/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-pay-platform/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-sentinel-dashboard/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-sentinel-dashboard/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-sentinel-dashboard/src/main/webapp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-sso-client-demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-sso-client-demo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-tx-manager/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pigx/pigx-visual/pigx-tx-manager/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

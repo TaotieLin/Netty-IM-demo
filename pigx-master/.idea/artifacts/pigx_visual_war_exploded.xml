@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="pigx-visual:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/pigx_visual_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="pigx-visual/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="pigx-visual" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
