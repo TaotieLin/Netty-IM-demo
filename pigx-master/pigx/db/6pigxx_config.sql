@@ -62,7 +62,7 @@ CREATE TABLE `config_info_aggr` (
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE KEY `uk_configinfoaggr_datagrouptenantdatum` (`data_id`,`group_id`,`tenant_id`,`datum_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='增加租户字段';
-
+// Specified key was too long; max key length is 767 bytes
 -- ----------------------------
 -- Table structure for config_info_beta
 -- ----------------------------

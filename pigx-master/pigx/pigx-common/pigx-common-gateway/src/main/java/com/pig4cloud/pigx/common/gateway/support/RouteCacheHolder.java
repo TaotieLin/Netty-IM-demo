@@ -42,7 +42,7 @@ public class RouteCacheHolder {
 	 */
 	public List<RouteDefinitionVo> getRouteList() {
 		List<RouteDefinitionVo> routeList = new ArrayList<>();
-		cache.forEach(route -> routeList.add(route));
+		cache.forEach(routeList::add);
 		return routeList;
 	}
 

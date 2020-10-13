@@ -1,7 +1,5 @@
 package taotie.controller;
 
-import java.util.HashSet;
-
 /**
  * @author lkd
  * @date 2020/7/29 17:02
@@ -32,10 +30,6 @@ public class AnonymousDemo1 {
         // ....
 
 
-        HashSet<Integer> set = new HashSet<>();
-        set.add(1);
-        set.add(1);
-        System.out.println(set);
 
     }
 }

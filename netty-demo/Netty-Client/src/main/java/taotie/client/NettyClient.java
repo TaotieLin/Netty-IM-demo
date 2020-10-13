@@ -6,6 +6,8 @@ import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -33,11 +35,15 @@ public class NettyClient {
     @Value("${netty.server.port}")
     private Integer serverPort;
 
+    javafx.scene.control.TextArea  ta = new javafx.scene.control.TextArea("初始化");
+
     @Autowired
     private NettyClientHandlerInitializer nettyClientHandlerInitializer;
 
     @Autowired
     private NettyClientHandler nettyClientHandler;
+
+    private Scene scene;
 
     /**
      * 线程组，用于客户端对服务端的链接、数据读写
@@ -50,7 +56,7 @@ public class NettyClient {
     private volatile Channel channel;
 
     @PostConstruct
-    public void start() throws InterruptedException{
+    public void start() throws Exception {
         //创建 Bootstrap 对象，用于 Netty Client启动
         Bootstrap bootstrap = new Bootstrap();
         bootstrap.group(eventLoopGroup)
@@ -60,19 +66,34 @@ public class NettyClient {
                 .option(ChannelOption.TCP_NODELAY,true)
                 .handler(nettyClientHandler)
                 .handler(nettyClientHandlerInitializer);
+
+        start(new Stage());
         //链接服务器，并异步等待成功，即启动客户端
         bootstrap.connect().addListener(new ChannelFutureListener() {
             @Override
             public void operationComplete(ChannelFuture future) throws Exception {
                 if (!future.isSuccess()){
                     log.error("[start][Netty Client 连接服务器({}:{}) 失败]", serverHost, serverPort);
+                    ta.appendText("[start][Netty Client 连接服务器({}:{}) 失败]");
                     reconnect();
                     return;
                 }
                 channel = future.channel();
                 log.info("[start][Netty Client 连接服务器({}:{}) 成功]", serverHost, serverPort);
+                ta.appendText("[start][Netty Client 连接服务器("+serverHost+":{"+serverPort+"}) 成功]");
             }
         });
+
+    }
+
+
+
+    public void start(Stage primaryStage) throws Exception {
+        Stage  stage = new Stage();
+        scene = new Scene(ta,450,200);
+        primaryStage.setTitle("SocketServer");
+        primaryStage.setScene(scene);
+        primaryStage.show();
 
     }
 
@@ -85,6 +106,8 @@ public class NettyClient {
                         start();
                     }catch (InterruptedException e){
                         log.info("[reconnect][重连失败]",e);
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
                 }
             },RECONNECT_SECONDS, TimeUnit.SECONDS);

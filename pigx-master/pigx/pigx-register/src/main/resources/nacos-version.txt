@@ -1,1 +1,3 @@
 version=${project.version}
+ Can't find error-message file 'D:\MySQL\share\errmsg.sys'. Check error-message file location and 'lc-messages-dir' configuration directive.
+Install/Remove of the Service Denied!

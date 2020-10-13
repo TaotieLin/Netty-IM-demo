@@ -35,12 +35,14 @@ public class CustomUserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private transient PersistService persistService;
 
+
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         User user = persistService.findUserByUsername(userName);
         if (user == null) {
             throw new UsernameNotFoundException(userName);
         }
+
         return new CustomUserDetails(user);
     }
 

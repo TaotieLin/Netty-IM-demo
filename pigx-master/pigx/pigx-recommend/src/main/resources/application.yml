@@ -16,10 +16,10 @@ spring:
     active: @profiles.active@
   datasource:
     druid:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/recommend?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-      username: root
-      password: root
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      url: jdbc:sqlserver://zy-crm-new.sqlserver.rds.aliyuncs.com:3433;DatabaseName=xiaoming
+      username: xiaoming_dev
+      password: kOCIYy&GpQAN82Yo
       initial-size: 10
       max-active: 100
       min-idle: 10

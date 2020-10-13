@@ -1,0 +1,236 @@
+2020-09-23 16:34:18.597  INFO 7816 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Loading nacos data, dataId: 'application-dev.yml', group: 'DEFAULT_GROUP', data: jasypt:
+  encryptor:
+    password: pigx
+    
+spring:
+  redis:
+    host: pigx-redis
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  cloud:
+    sentinel:
+      transport:
+        dashboard: pigx-sentinel:5020
+                
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+feign:
+  sentinel:
+    enabled: true
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
+
+mybatis-plus:
+  tenant-enable: ture
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  global-config:
+    banner: false
+    db-config:
+      id-type: auto
+      field-strategy: NOT_EMPTY
+  type-handlers-package:  com.pig4cloud.pigx.common.data.handler
+
+swagger:
+  title: PigX Swagger API
+  license: Powered By PigX
+  licenseUrl: https://pig4cloud.com/
+  terms-of-service-url: https://pig4cloud.com/
+  contact:
+    email: wangiegie@gmail.com
+    url: https://pig4cloud.com/about.html
+  authorization:
+    name: pigX OAuth
+    auth-regex: ^.*$
+    authorization-scope-list:
+      - scope: server
+        description: server all
+    token-url-list:
+      - http://${GATEWAY-HOST:pigx-gateway}:${GATEWAY-PORT:9999}/auth/oauth/token
+
+security:
+  oauth2:
+    client:
+      ignore-urls:
+        - /actuator/**
+        - /v2/api-docs
+        - /wxaccount/**
+    resource:
+      loadBalanced: true
+      token-info-uri: http://pigx-auth/oauth/check_token
+2020-09-23 16:34:18.630  WARN 7816 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[pigx-mp-platform] & group[DEFAULT_GROUP]
+2020-09-23 16:34:18.637  WARN 7816 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[pigx-mp-platform.yml] & group[DEFAULT_GROUP]
+2020-09-23 16:34:18.642  INFO 7816 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Loading nacos data, dataId: 'pigx-mp-platform-dev.yml', group: 'DEFAULT_GROUP', data: ## spring security 配置
+security:
+  oauth2:
+    client:
+      client-id: ENC(vW+Nup9LaTfIFwgufUBsYg==)
+      client-secret: ENC(vW+Nup9LaTfIFwgufUBsYg==)
+      scope: server
+# 数据源
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: ${MYSQL-USER:root}
+      password: ${MYSQL-PWD:root}
+      url: jdbc:mysql://${MYSQL-HOST:pigx-mysql}:${MYSQL-PORT:3306}/${MYSQL-DB:pigxx_mp}?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&allowMultiQueries=true&allowPublicKeyRetrieval=true
+  resources:
+    static-locations: classpath:/static/,classpath:/views/
+
+
+# 租户表维护
+pigx:
+  tenant:
+    column: tenant_id
+    tables:
+      - wx_mp_menu
+      - wx_account
+      - wx_account_fans
+      - wx_fans_msg_res
+2020-09-23 16:34:18.644  INFO 7816 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-pigx-mp-platform-dev.yml'}, BootstrapPropertySource {name='bootstrapProperties-pigx-mp-platform.yml'}, BootstrapPropertySource {name='bootstrapProperties-pigx-mp-platform'}, BootstrapPropertySource {name='bootstrapProperties-application-dev.yml'}]
+2020-09-23 16:34:18.680  INFO 7816 --- [main] EnableEncryptablePropertiesConfiguration : Bootstraping jasypt-string-boot auto configuration in context: pigx-mp-platform-1
+2020-09-23 16:34:18.680  INFO 7816 --- [main] c.p.pigx.mp.PigxMpPlatformApplication    : The following profiles are active: dev
+2020-09-23 16:34:20.363  INFO 7816 --- [main] o.s.c.annotation.AutoProxyRegistrar      : AutoProxyRegistrar was imported but no annotations were found having both 'mode' and 'proxyTargetClass' attributes of type AdviceMode and boolean respectively. This means that auto proxy creator registration and configuration may not have occurred as intended, and components may not be proxied as expected. Check to ensure that AutoProxyRegistrar has been @Import'ed on the same class where these annotations are declared; otherwise remove the import of AutoProxyRegistrar altogether.
+2020-09-23 16:34:20.672  WARN 7816 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format.
+2020-09-23 16:34:20.677  WARN 7816 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format.
+2020-09-23 16:34:21.104  INFO 7816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-09-23 16:34:21.107  INFO 7816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-09-23 16:34:21.139  INFO 7816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2020-09-23 16:34:21.208  WARN 7816 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-09-23 16:34:21.318  WARN 7816 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pig4cloud.pigx.common.swagger.config, com.pig4cloud.pigx.mp]' package. Please check your configuration.
+2020-09-23 16:34:21.449  INFO 7816 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ff3e6a57-4f13-3ba9-8180-ce49bad9b443
+2020-09-23 16:34:21.523  INFO 7816 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2020-09-23 16:34:21.535  INFO 7816 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource bootstrapProperties-pigx-mp-platform-dev.yml [org.springframework.cloud.bootstrap.config.BootstrapPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2020-09-23 16:34:21.535  INFO 7816 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource bootstrapProperties-pigx-mp-platform.yml [org.springframework.cloud.bootstrap.config.BootstrapPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2020-09-23 16:34:21.535  INFO 7816 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource bootstrapProperties-pigx-mp-platform [org.springframework.cloud.bootstrap.config.BootstrapPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2020-09-23 16:34:21.536  INFO 7816 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource bootstrapProperties-application-dev.yml [org.springframework.cloud.bootstrap.config.BootstrapPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2020-09-23 16:34:21.536  INFO 7816 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2020-09-23 16:34:21.536  INFO 7816 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-09-23 16:34:21.536  INFO 7816 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-09-23 16:34:21.536  INFO 7816 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2020-09-23 16:34:21.536  INFO 7816 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2020-09-23 16:34:21.536  INFO 7816 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2020-09-23 16:34:21.536  INFO 7816 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-09-23 16:34:21.536  INFO 7816 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-09-23 16:34:21.536  INFO 7816 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource springCloudDefaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-09-23 16:34:21.550  INFO 7816 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2020-09-23 16:34:21.630  INFO 7816 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 16:34:21.786  INFO 7816 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 16:34:21.791  INFO 7816 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 16:34:21.796  INFO 7816 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5b29ab61' of type [org.springframework.security.oauth2.provider.expression.OAuth2MethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 16:34:21.799  INFO 7816 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 16:34:21.804  INFO 7816 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 16:34:21.814  INFO 7816 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2020-09-23 16:34:21.814  INFO 7816 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2020-09-23 16:34:21.879  INFO 7816 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 16:34:21.927  INFO 7816 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration$$EnhancerBySpringCGLIB$$761118e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 16:34:22.179  WARN 7816 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-09-23 16:34:22.216  INFO 7816 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-09-23 16:34:22.216  INFO 7816 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3506 ms
+2020-09-23 16:34:22.232  INFO 7816 --- [main] c.a.c.s.SentinelWebAutoConfiguration     : [Sentinel Starter] register Sentinel CommonFilter with urlPatterns: [/*].
+2020-09-23 16:34:23.495  INFO 7816 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-09-23 16:34:23.806  INFO 7816 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-23 16:34:23.928  INFO 7816 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-23 16:34:24.120  INFO 7816 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2020-09-23 16:34:24.121  INFO 7816 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2020-09-23 16:34:24.121  INFO 7816 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2020-09-23 16:34:24.186  INFO 7816 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2020-09-23 16:34:24.564  INFO 7816 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2020-09-23 16:34:24.571  INFO 7816 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWithMD5AndDES
+2020-09-23 16:34:24.572  INFO 7816 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+2020-09-23 16:34:24.572  INFO 7816 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+2020-09-23 16:34:24.572  INFO 7816 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+2020-09-23 16:34:24.572  INFO 7816 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+2020-09-23 16:34:24.572  INFO 7816 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+2020-09-23 16:34:24.573  INFO 7816 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.ivGeneratorClassname, using default value: org.jasypt.salt.NoOpIVGenerator
+2020-09-23 16:34:24.574  INFO 7816 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+2020-09-23 16:34:26.149  INFO 7816 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 22 endpoint(s) beneath base path '/actuator'
+2020-09-23 16:34:26.317  INFO 7816 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-23 16:34:26.431  WARN 7816 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-09-23 16:34:26.431  INFO 7816 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-09-23 16:34:26.436  WARN 7816 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-09-23 16:34:26.436  INFO 7816 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-09-23 16:34:26.520  INFO 7816 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-23 16:34:26.639  INFO 7816 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-09-23 16:34:27.073  WARN 7816 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalStateException: Cannot apply org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer@9715d26 to already built object
+2020-09-23 16:34:27.074  INFO 7816 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-23 16:34:27.079  INFO 7816 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2020-09-23 16:34:27.082  INFO 7816 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-23 16:34:27.107  INFO 7816 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-09-23 16:34:27.117 ERROR 7816 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalStateException: Cannot apply org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer@9715d26 to already built object
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at com.pig4cloud.pigx.mp.PigxMpPlatformApplication.main(PigxMpPlatformApplication.java:38) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalStateException: Cannot apply org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer@9715d26 to already built object
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot apply org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer@9715d26 to already built object
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.add(AbstractConfiguredSecurityBuilder.java:195) ~[spring-security-config-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.apply(AbstractConfiguredSecurityBuilder.java:133) ~[spring-security-config-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.security.config.annotation.web.builders.HttpSecurity.getOrApply(HttpSecurity.java:3023) ~[spring-security-config-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.security.config.annotation.web.builders.HttpSecurity.authorizeRequests(HttpSecurity.java:1173) ~[spring-security-config-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer.configure(ResourceServerSecurityConfigurer.java:221) ~[spring-security-oauth2-2.3.6.RELEASE.jar:na]
+	at org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer.configure(ResourceServerSecurityConfigurer.java:59) ~[spring-security-oauth2-2.3.6.RELEASE.jar:na]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.configure(AbstractConfiguredSecurityBuilder.java:383) ~[spring-security-config-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:329) ~[spring-security-config-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41) ~[spring-security-config-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.security.config.annotation.web.builders.WebSecurity.performBuild(WebSecurity.java:292) ~[spring-security-config-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.security.config.annotation.web.builders.WebSecurity.performBuild(WebSecurity.java:79) ~[spring-security-config-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:333) ~[spring-security-config-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41) ~[spring-security-config-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:104) ~[spring-security-config-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 22 common frames omitted
+

@@ -37,7 +37,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 /**
  * Spring security config
- *
+ *  线程本地变量
  * @author Nacos
  */
 @Configuration

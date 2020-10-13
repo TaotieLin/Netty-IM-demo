@@ -83,3 +83,15 @@ max_length_for_sort_data 参数的设置。曾经就有同事的数据库出现�
 使用了传统的第一种排序算法而导致，在加大了max_length_for_sort_data 参数值之后，系统负载马上得到了大的缓解，响应也快了很多。
 如果order by的子句只引用了联接中的第一个表，MySQL会先对第一个表进行排序，然后进行联接。也就是expain中的Extra的Using Filesort.否则MySQL
 先把结果保存到临时表(Temporary Table),然后再对临时表的数据进行排序.此时expain中的Extra的显示Using temporary Using Filesort.
+
+
+#查询的优化
+使用索引的语句也有可能是慢查询，我们的查询优化的过程，往往就是减少扫描行数的过程。
+慢查询归纳起来大概有这么几种情况：
+
+全表扫描
+全索引扫描
+索引过滤性不好
+频繁回表的开销
+
+使用虚拟列优化你的索引。

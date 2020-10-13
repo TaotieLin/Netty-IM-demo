@@ -17,6 +17,7 @@
 
 package com.pig4cloud.pigx.act.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.pig4cloud.pigx.act.entity.LeaveBill;
@@ -49,9 +50,11 @@ public class LeaveBillController {
 	 * @param leaveBill 请假审批单
 	 * @return
 	 */
+	@SentinelResource("leave-bill/page")
 	@GetMapping("/page")
 	public R getLeaveBillPage(Page page, LeaveBill leaveBill) {
-		return R.ok(leaveBillService.page(page, Wrappers.query(leaveBill)));
+		return R.ok("qingjia1!");
+//		return R.ok(leaveBillService.page(page, Wrappers.query(leaveBill)));
 	}
 
 

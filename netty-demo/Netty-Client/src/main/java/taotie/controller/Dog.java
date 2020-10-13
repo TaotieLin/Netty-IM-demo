@@ -22,4 +22,8 @@ public class Dog {
     {
         this.age++;
     }
+
+    public static void main(String[] args) {
+
+    }
 }

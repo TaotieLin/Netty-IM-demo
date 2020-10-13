@@ -22,6 +22,7 @@ import com.pig4cloud.pigx.common.core.util.R;
 import com.pig4cloud.pigx.common.log.annotation.SysLog;
 import com.pig4cloud.pigx.mp.config.WxMpConfiguration;
 import com.pig4cloud.pigx.mp.entity.WxAccount;
+import com.pig4cloud.pigx.mp.feign.OaServer;
 import com.pig4cloud.pigx.mp.service.WxAccountService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -40,6 +41,7 @@ import org.springframework.web.bind.annotation.*;
 public class WxAccountController {
 	private final WxMpConfiguration wxMpConfiguration;
 	private final WxAccountService wxAccountService;
+	private final OaServer oaServer;
 
 	/**
 	 * 分页查询
@@ -51,6 +53,14 @@ public class WxAccountController {
 	@GetMapping("/page")
 	public R getWxAccountPage(Page page, WxAccount wxAccount) {
 		return R.ok(wxAccountService.page(page, Wrappers.query(wxAccount)));
+	}
+
+	/**
+	 * 测试接口
+	 */
+	@GetMapping("oa")
+	public R oa(){
+		return oaServer.page();
 	}
 
 
