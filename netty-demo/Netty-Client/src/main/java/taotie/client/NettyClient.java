@@ -6,8 +6,6 @@ import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -35,7 +33,6 @@ public class NettyClient {
     @Value("${netty.server.port}")
     private Integer serverPort;
 
-    javafx.scene.control.TextArea  ta = new javafx.scene.control.TextArea("初始化");
 
     @Autowired
     private NettyClientHandlerInitializer nettyClientHandlerInitializer;
@@ -43,7 +40,6 @@ public class NettyClient {
     @Autowired
     private NettyClientHandler nettyClientHandler;
 
-    private Scene scene;
 
     /**
      * 线程组，用于客户端对服务端的链接、数据读写
@@ -67,20 +63,17 @@ public class NettyClient {
                 .handler(nettyClientHandler)
                 .handler(nettyClientHandlerInitializer);
 
-        start(new Stage());
         //链接服务器，并异步等待成功，即启动客户端
         bootstrap.connect().addListener(new ChannelFutureListener() {
             @Override
             public void operationComplete(ChannelFuture future) throws Exception {
                 if (!future.isSuccess()){
                     log.error("[start][Netty Client 连接服务器({}:{}) 失败]", serverHost, serverPort);
-                    ta.appendText("[start][Netty Client 连接服务器({}:{}) 失败]");
                     reconnect();
                     return;
                 }
                 channel = future.channel();
                 log.info("[start][Netty Client 连接服务器({}:{}) 成功]", serverHost, serverPort);
-                ta.appendText("[start][Netty Client 连接服务器("+serverHost+":{"+serverPort+"}) 成功]");
             }
         });
 
@@ -88,14 +81,7 @@ public class NettyClient {
 
 
 
-    public void start(Stage primaryStage) throws Exception {
-        Stage  stage = new Stage();
-        scene = new Scene(ta,450,200);
-        primaryStage.setTitle("SocketServer");
-        primaryStage.setScene(scene);
-        primaryStage.show();
 
-    }
 
     public void reconnect() {
             eventLoopGroup.schedule(new Runnable() {
